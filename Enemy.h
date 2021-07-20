@@ -6,6 +6,7 @@ using namespace sf;
 class Enemy
 {
 protected:
+	
 	RectangleShape enemy;
 	Vector2f velocity;
 	int factor;
@@ -15,7 +16,10 @@ protected:
 	float M_PI = 3.14159;
 	float angle;
 	bool normalAsteroid;
+	Vector2f position;
 public:
+	Enemy();
+	~Enemy();
 	 bool getAseroidType();
 	 void setAsteroidTpye(bool type);
 	virtual void init() = 0;
@@ -24,7 +28,8 @@ public:
 	int gethitCount();
 	int getnoOfHitsRequired();
 	void setHitcount(int hit);
-
+	Vector2f getPosition();
+	void setPosition(Vector2f position);
 	
 };
 

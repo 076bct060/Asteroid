@@ -159,6 +159,18 @@ void Game::update(float deltaTime)
 						enemies.erase(enemies.begin() + i);
 						delete(enemy);
 					}
+					if (enemy->getnoOfHitsRequired() == 3)
+					{
+						for (int k = 0; k < 2; k++)
+						{
+							Enemy* smallAsteroid = new SmallAsteroid();
+							smallAsteroid->setPosition(enemy->getPosition());
+							smallAsteroid->init();
+							enemies.push_back(smallAsteroid);
+						}
+						enemies.erase(enemies.begin() + i);
+						delete(enemy);
+					}
 
 				}
 			}

@@ -1,5 +1,15 @@
 #include "Enemy.h"
 
+Enemy::Enemy()
+{
+	position.x = 500;
+	position.y = 500;
+}
+
+Enemy::~Enemy()
+{
+}
+
 bool Enemy::getAseroidType()
 {
 	return normalAsteroid;
@@ -44,5 +54,15 @@ int Enemy::getnoOfHitsRequired()
 void Enemy::setHitcount(int hit)
 {
 	hitCount = hit;
+}
+
+Vector2f Enemy::getPosition()
+{
+	return enemy.getPosition();
+}
+
+void Enemy::setPosition(Vector2f position)
+{
+	this->position = position;
 }
 
