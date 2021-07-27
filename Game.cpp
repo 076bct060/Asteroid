@@ -146,7 +146,7 @@ void Game::update(float deltaTime)
 		}
 		
 	}
-		if (enemies.size() == 1)
+		if (enemies.size() == 1&&level!=finalLevel)
 		{
 			enemies[0]->setAsteroidTpye(true);
 		}
