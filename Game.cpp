@@ -1,5 +1,5 @@
 #include "Game.h"
-int Game::level = 0;
+int Game::level = 2;
 int Game::finalLevel = 3;
 Game::Game() :window(VideoMode(1000, 720), "Asteroid")
 {

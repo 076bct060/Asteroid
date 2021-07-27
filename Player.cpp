@@ -47,6 +47,7 @@ void Player::init()
 	player.setOrigin(player.getRadius() / 2, player.getRadius() / 2);
 	M_PI = 3.14159;
 	factor = 70;
+	/*Add these*/
 	//playertexture.loadFromFile("space.webp");
 	//player.setTexture(playertexture);
 }
@@ -67,13 +68,14 @@ void Player::updatePlayer(float deltaTime)
 Player::~Player()
 {
 }
-
+/*Add this*/
 /*
 * Sprite Player::getSprite()
 {
 	return player;
 }
 */
+///Remove this function
 CircleShape Player::getSprite()
 {
 	return player;

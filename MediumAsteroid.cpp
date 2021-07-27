@@ -2,9 +2,13 @@
 
 void MediumAsteroid::init()
 {
+    /*Remove from here*/
     enemy.setFillColor(Color::Green);
-    enemy.setSize(Vector2f(35, 35));
-    enemy.setOrigin(enemy.getSize() / (float)2);
+    enemy.setSize(Vector2f(45, 45));
+    /*To here*/
+    /*Add*/
+    //enemyTexture.loadFromFile("");
+    //enemy.setTexture(enemyTexture);
     factor = 60;
     rotation = rand() % 361;
     enemy.setRotation(rotation);

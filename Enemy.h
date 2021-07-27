@@ -7,7 +7,8 @@ class Enemy
 {
 protected:
 	
-	RectangleShape enemy;
+	/*Replace rectangle shape with sprite*/RectangleShape enemy;
+	//Texture enemyTexture;
 	Vector2f velocity;
 	int factor;
 	int hitCount;
@@ -25,7 +26,7 @@ public:
 	 void setAsteroidTpye(bool type);
 	virtual void init() = 0;
 	virtual void update(float deltaTime,Vector2f position);
-	RectangleShape getSprite();
+	/*Replace rectangleShape with Sprite*/RectangleShape getSprite();
 	int gethitCount();
 	int getnoOfHitsRequired();
 	void setHitcount(int hit);

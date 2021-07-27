@@ -1,9 +1,14 @@
 #include "TrackingAsteroid.h"
 void TrackingAsteroid::init()
 {
+
+    /*Remove from here*/
     enemy.setFillColor(Color::Blue);
     enemy.setSize(Vector2f(25, 25));
-    enemy.setOrigin(enemy.getSize() / (float)2);
+    /*To here*/
+    /*Add*/
+    //enemyTexture.loadFromFile("");
+    //enemy.setTexture(enemyTexture);
     factor = 50;
     rotation = rand() % 361;
     enemy.setRotation(rotation);

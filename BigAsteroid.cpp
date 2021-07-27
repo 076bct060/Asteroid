@@ -2,9 +2,13 @@
 
 void BigAsteroid::init()
 {
+    /*Remove from here*/
     enemy.setFillColor(Color::Green);
-    enemy.setSize(Vector2f(50, 50));
-    enemy.setOrigin(enemy.getSize() / (float)2);
+    enemy.setSize(Vector2f(55, 55));
+    /*To here*/
+    /*Add*/
+    //enemyTexture.loadFromFile("");
+    //enemy.setTexture(enemyTexture);
     factor = 40;
     rotation = rand() % 361;
     enemy.setRotation(rotation);

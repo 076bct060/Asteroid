@@ -33,7 +33,7 @@ void Enemy::update(float deltaTime,Vector2f position)
 		velocity = Vector2f(std::cos(angle), std::sin(angle));
 	}
 }
-
+/*Replace rectangle shape with sprite*/
 RectangleShape Enemy::getSprite()
 {
 	return enemy;

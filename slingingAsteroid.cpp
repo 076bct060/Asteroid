@@ -2,9 +2,13 @@
 
 void slingingAsteroid::init()
 {
-    enemy.setFillColor(Color::Green);
-    enemy.setSize(Vector2f(25, 25));
-    enemy.setOrigin(enemy.getSize() / (float)2);
+    /*Remove from here*/
+      enemy.setFillColor(Color::Green);
+      enemy.setSize(Vector2f(35, 35));
+    /*To here*/
+    /*Add*/
+      //enemyTexture.loadFromFile("");
+      //enemy.setTexture(enemyTexture);
     factor = 120;
     rotation = rand() % 361;
     enemy.setRotation(rotation);

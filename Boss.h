@@ -7,6 +7,7 @@ class Boss :
 public:
     void init();
     void update(float deltaTime, Vector2f position);
+    //Replace circeleShapeWithSprite
     CircleShape getSprite();
     float getSpawnTime();
     void setTimeCount(float count);
@@ -15,7 +16,9 @@ public:
 
 private:
     float movingAngle;
-    CircleShape circle;
+    //Replace circleShape with sprite
+    CircleShape boss;
+    //Texture bossTexture;
     float spawnTime;
     float timeCount;
 };

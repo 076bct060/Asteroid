@@ -22,7 +22,9 @@ public:
 	~Player();
 	void init();
 	void updatePlayer(float deltaTime);
+	//Remove this
 	CircleShape getSprite();
+	/*Add this*/
 	//Sprite getSprite();
 	void setMoving(bool moving);
 	void setRotation(int rot);

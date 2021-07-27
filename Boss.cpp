@@ -3,14 +3,17 @@
 
 void Boss::init()
 {
-	circle.setFillColor(Color::Green);
-	circle.setRadius(50);
-	circle.setPointCount(3);
-	circle.setOrigin(circle.getRadius() / (float)2, circle.getRadius() / (float)2);
+	/*Remove from here*/
+	boss.setFillColor(Color::Green);
+	boss.setRadius(50);
+	boss.setPointCount(3);
+	/* to Here*/
+	//bossTexture.loadFromFile();
+	//boss.setTexture(bossTexture);
 	factor = 70;
 	rotation = rand() % 361;
-	circle.setPosition(700,500);
-	angle = circle.getRotation() / 180 * M_PI - M_PI / 2;
+	boss.setPosition(700,500);
+	angle = boss.getRotation() / 180 * M_PI - M_PI / 2;
 	velocity = Vector2f(std::cos(angle), std::sin(angle));
 	hitCount = 0;
 	noOfHitsRequired = 20;
@@ -21,20 +24,21 @@ void Boss::init()
 
 void Boss::update(float deltaTime, Vector2f position)
 {
-	circle.move(velocity * deltaTime * (float)factor);
-	if (circle.getPosition().x < 0 || circle.getPosition().x > 1000 ||
-		circle.getPosition().y < 0 || circle.getPosition().y>720)
+	boss.move(velocity * deltaTime * (float)factor);
+	if (boss.getPosition().x < 0 || boss.getPosition().x > 1000 ||
+		boss.getPosition().y < 0 || boss.getPosition().y>720)
 	{
 		rotation = rotation + 90;
-		circle.rotate(rotation);
-		angle = circle.getRotation() / 180 * M_PI - M_PI / 2;
+		boss.rotate(rotation);
+		angle = boss.getRotation() / 180 * M_PI - M_PI / 2;
 		velocity = Vector2f(std::cos(angle), std::sin(angle));
 	}
 }
-
+//Replace CircleShape with sprite
 CircleShape Boss::getSprite()
 {
-	return circle;
+	//Replace boss with boss
+	return boss;
 }
 
 float Boss::getSpawnTime()
