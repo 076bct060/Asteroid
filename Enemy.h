@@ -17,6 +17,7 @@ protected:
 	float angle;
 	bool normalAsteroid;
 	Vector2f position;
+	Vector2f playerPosition;
 public:
 	Enemy();
 	~Enemy();
@@ -30,6 +31,6 @@ public:
 	void setHitcount(int hit);
 	Vector2f getPosition();
 	void setPosition(Vector2f position);
-	
+	void setplayerPosition(Vector2f pos);
 };
 

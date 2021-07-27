@@ -1,3 +1,4 @@
+#pragma once
 #include<SFML/Graphics.hpp>
 #include<vector>
 #include "Player.h"
@@ -7,7 +8,8 @@
 #include"SmallAsteroid.h"
 #include"MediumAsteroid.h"
 #include"TrackingAsteroid.h"
-#pragma once
+#include "Boss.h"
+#include "slingingAsteroid.h"
 using namespace sf;
 class Game
 {
@@ -20,6 +22,7 @@ public:
 
 private:
 	static int level;
+	static int finalLevel;
 	void processEvent();
 	void update(float deltaTime);
 	void spawnEnemies();
@@ -31,8 +34,11 @@ private:
 	Sprite backgroundSprite;
 	Player player;
 	bool gameOver;
+	void gameWonScreen();
 	void gameOverScreen();
 	std::vector<Laser*>lasers;
 	std::vector<Enemy*>enemies;
+	std::vector<Boss*>bosses;
+	bool gameWon;
 };
 

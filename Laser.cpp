@@ -24,7 +24,7 @@ void Laser::init(Vector2f position, float Rotation)
 	laser.setPosition(position.x ,position.y);
 	laser.setFillColor(Color::Red);
 	laser.setRotation(rotation);
-	factor = 400;
+	factor = 800;
 }
 //Replace rectagngleShape with Sprite
 RectangleShape Laser::getSprite()

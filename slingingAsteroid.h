@@ -1,10 +1,8 @@
 #pragma once
 #include "Enemy.h"
-#include<iostream>
-class BigAsteroid :
+class slingingAsteroid :
     public Enemy
 {
-public:
     void init();
 };
 

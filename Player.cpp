@@ -9,7 +9,7 @@ void Player::playerMovement(float deltaTime)
 	}
 	if (ismoving)
 	{
-		float angle = player.getRotation() / 180 * M_PI - M_PI / 2;
+		float angle = player.getRotation() / 180 * M_PI -M_PI/2;
 		velocity = Vector2f(std::cos(angle), std::sin(angle)) * deltaTime * factor;
 		player.move(velocity);
 	}

@@ -32,8 +32,6 @@ void Enemy::update(float deltaTime,Vector2f position)
 		angle = enemy.getRotation() / 180 * M_PI - M_PI / 2;
 		velocity = Vector2f(std::cos(angle), std::sin(angle));
 	}
-	
-	
 }
 
 RectangleShape Enemy::getSprite()
@@ -64,5 +62,10 @@ Vector2f Enemy::getPosition()
 void Enemy::setPosition(Vector2f position)
 {
 	this->position = position;
+}
+
+void Enemy::setplayerPosition(Vector2f pos)
+{
+	playerPosition = pos;
 }
 
