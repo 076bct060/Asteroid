@@ -18,7 +18,7 @@ void Boss::init()
 	hitCount = 0;
 	noOfHitsRequired = 20;
 	normalAsteroid = true;
-	spawnTime = 8.0f;
+	spawnTime = 9.0f;
 	timeCount = 0;
 }
 

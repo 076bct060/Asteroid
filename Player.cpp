@@ -46,7 +46,7 @@ void Player::init()
 	player.setPointCount(3);
 	player.setOrigin(player.getRadius() / 2, player.getRadius() / 2);
 	M_PI = 3.14159;
-	factor = 70;
+	factor = 80;
 	/*Add these*/
 	//playertexture.loadFromFile("space.webp");
 	//player.setTexture(playertexture);

@@ -27,7 +27,7 @@ void Enemy::update(float deltaTime,Vector2f position)
 	if (enemy.getPosition().x < 0  || enemy.getPosition().x > 1000 ||
 		enemy.getPosition().y < 0 || enemy.getPosition().y>720)
 	{
-		rotation = rotation + 90;
+		rotation = rotation-90;
 		enemy.setRotation(rotation);
 		angle = enemy.getRotation() / 180 * M_PI - M_PI / 2;
 		velocity = Vector2f(std::cos(angle), std::sin(angle));
